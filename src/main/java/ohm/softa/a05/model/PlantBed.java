@@ -21,7 +21,12 @@ public class PlantBed<T extends Plant> {
     }
 
     public SimpleList<T> getPlantsByColor(PlantColor color){
+        // Filter alle Objekte, die folgende Bedingung erfüllen: O wird gegeben an bedingung
         return plants.filter(o -> (o.getColor() == color) );
+    }
+
+    public void remove(T plant){
+        plants = plants.filter(o -> (!o.equals(plant)));
     }
 
 }

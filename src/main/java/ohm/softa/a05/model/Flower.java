@@ -25,32 +25,4 @@ public class Flower extends Plant{
         return this.color;
     }
 
-    //implement equals hashCode und toString
-    @Override
-    public boolean equals(Object obj) {
-        // prüfe ob obj er selbst ist (genau gleiche Speicheradresse)
-        if (this == obj) return true;
-
-        // Muss gleicher Typ sein
-        if (!(obj instanceof Flower)) return false;
-
-        Flower temp = (Flower) obj;
-
-        return temp.getHeight() == this.getHeight();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(height, family, name, color);
-    }
-
-    @Override
-    public String toString() {
-        return "Flower{" +
-                "height=" + height +
-                ", family='" + family + '\'' +
-                ", name='" + name + '\'' +
-                ", color=" + color +
-                '}';
-    }
 }
